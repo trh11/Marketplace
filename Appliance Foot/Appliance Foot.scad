@@ -1,0 +1,14 @@
+$fn=200;
+difference(){
+    union(){
+        cylinder(2,15,15);
+        translate([0,0,2])cylinder(10,15,13);
+        translate([0,0,12])cylinder(9,13,12);
+        translate([0,0,21])cylinder(2,10,10);
+        translate([0,0,21])rotate_extrude(angle=360)translate([10,0])circle(2);
+    }
+    cylinder(23,2.25,2.25);
+    translate([0,0,3])cylinder(20,4,4);
+    translate([0,0,21.75])cylinder(1.25,6,6);
+    cylinder();
+}
