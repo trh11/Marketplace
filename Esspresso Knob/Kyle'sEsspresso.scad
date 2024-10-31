@@ -1,0 +1,20 @@
+$fn=100;
+union(){
+    difference(){
+        cylinder(30,23.4,23.4);
+        translate([0,0,12.5])cylinder(30,20.5,20.5);
+        cylinder(12.5,20.9,20.9);
+    }
+    difference(){
+        union(){
+            translate([0,0,6])cylinder(14,17,17);
+            translate([-21,-3.75,7.5])cube([42,7.5,12.5]);
+            rotate([0,0,90])translate([-21,-3.75,7.5])cube([42,7.5,12.5]);
+        }
+        translate([-8,-8,6])cube([16,16,3]);
+        difference(){
+            cylinder(30,4.3,4.3);
+            translate([-4.25,3,0])cube([17,3,40]);
+        }
+    }
+}
