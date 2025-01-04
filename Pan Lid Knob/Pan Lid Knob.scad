@@ -1,0 +1,21 @@
+$fn=200;
+difference(){
+    union(){
+        cylinder(12,10,10.5);
+        translate([0,0,-5.5])difference(){
+            sphere(26);
+            translate([-26,-26,-26])cube([52,52,47]);
+        }
+        translate([0,0,12])union(){
+            translate([0,0,2])rotate_extrude()translate([14,0,0])circle(r=2);
+            cylinder(4,13.5,13.5);
+        }
+        difference(){
+            translate([0,0,9])rotate_extrude()translate([10.5,0,0])square(3,3);
+            translate([0,0,9])rotate_extrude()translate([13,0,0])circle(r=3);
+        }
+    }
+    cylinder(14,2.75,2.75);
+    cylinder(1.6,7,7);
+    translate([0,0,1.6])cylinder(2,3.5,2.75);
+}
